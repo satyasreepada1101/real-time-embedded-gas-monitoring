@@ -1,29 +1,67 @@
-# 🔥 Smart Chimney System with GSM Alert
+# 🔥 Real-Time Embedded Gas Monitoring & Ventilation System
 
 ## 📌 Overview
-An IoT-based Smart Chimney System that automatically controls fan speed based on temperature and humidity and detects gas/smoke leaks using MQ2 sensor. In emergency situations, it sends an SMS alert and makes an emergency call using GSM module.
+This project implements a real-time embedded gas monitoring and automated ventilation system using Arduino and Embedded C.
+
+The system continuously monitors temperature, humidity, and gas/smoke concentration in a kitchen environment. Based on sensor readings, it dynamically adjusts ventilation speed. In hazardous situations, it activates an alarm and sends remote alerts using a GSM module.
 
 ---
 
-## ⚙️ Components Used
-- Arduino UNO
-- DHT22 Temperature & Humidity Sensor
-- MQ2 Gas Sensor
-- SIM800L GSM Module
-- 16x2 I2C LCD
-- DC Motor + Motor Driver
-- Buzzer
-- Push Button
+## 🏗 System Architecture
+The system consists of:
+
+- **Input Layer**
+  - DHT22 – Temperature & Humidity sensing
+  - MQ-2 – Gas/Smoke detection
+  - Push Button – Manual override control
+
+- **Processing Layer**
+  - Arduino Uno (ATmega328P)
+  - Threshold evaluation logic
+  - Non-blocking timing using `millis()`
+  - Multi-mode control (Auto / Manual / Emergency)
+
+- **Output Layer**
+  - 12V DC Fan (PWM controlled via L298N driver)
+  - Passive Buzzer (audio alert)
+  - 16x2 I2C LCD (real-time system display)
+  - SIM800L GSM module (SMS + Call alert)
 
 ---
 
-## 🚀 Features
-- Automatic Mode (Temperature & Humidity Based)
-- Manual Mode (Button Controlled)
-- Gas Detection with Delay Confirmation
-- SMS Alert System
-- Emergency Call Function
-- Real-time LCD Display
+## 🚀 Key Features
+
+- Automatic fan speed control based on temperature & humidity thresholds
+- Gas detection with confirmation delay to reduce false triggers
+- Emergency mode with:
+  - Buzzer activation
+  - Maximum fan speed
+  - SMS alert
+  - Automated phone call
+- Manual override with multi-speed selection
+- Real-time system feedback via LCD
+- Modular Embedded C design with dedicated functional units
+
+---
+
+## 🧠 Core Logic Implementation
+
+- Gas detection uses analog threshold monitoring with timed confirmation logic.
+- Auto mode calculates required fan speed using dominant environmental parameter.
+- Manual mode cycles through speed levels using button debouncing.
+- Safety logic overrides all other operations when gas is detected.
+
+---
+
+## ⚙️ Technologies Used
+
+- Embedded C
+- Arduino IDE
+- Sensor Integration
+- PWM Motor Control
+- AT Command Communication (GSM)
+- I2C Communication
+- Serial Debugging
 
 ---
 
@@ -40,14 +78,24 @@ An IoT-based Smart Chimney System that automatically controls fan speed based on
 
 ---
 
-## 🧠 How It Works
+## 📂 Repository Structure
 
-- If temperature or humidity exceeds threshold → fan speed increases.
-- If gas level exceeds safe limit for 3 seconds →  
-  - Buzzer activates  
-  - Fan runs at max speed  
-  - SMS sent  
-  - Emergency call made  
+```
+real-time-embedded-gas-monitoring/
+│
+├── code/
+│   └── smart_chimney.ino
+│
+├── images/
+│   ├── pic 1.png
+│   ├── pic 2.png
+│   └── working model.png
+│
+└── README.md
+```
 
 ---
 
+## 🎯 Purpose
+
+To demonstrate real-time embedded system design integrating sensing, control, communication, and safety mechanisms within a single microcontroller-based architecture.
