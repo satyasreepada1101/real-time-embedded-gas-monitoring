@@ -51,5 +51,3 @@ An IoT-based Smart Chimney System that automatically controls fan speed based on
 
 ---
 
-## 👨‍💻 Author
-Venkata Satya Sreepada
