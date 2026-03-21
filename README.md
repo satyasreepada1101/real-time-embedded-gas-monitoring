@@ -171,5 +171,5 @@ To demonstrate real-time embedded system design integrating sensing, control, co
 ## 👨‍💻 Contributors
 
 - Satya Sreepada
-- Jahnavi S
 - Grandhi Ananya
+- Jahnavi S
