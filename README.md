@@ -167,3 +167,9 @@ real-time-embedded-gas-monitoring/
 ## 🎯 Purpose
 
 To demonstrate real-time embedded system design integrating sensing, control, communication, and safety mechanisms within a single microcontroller-based architecture.
+
+## 👨‍💻 Contributors
+
+- **Your Name**
+- **Contributor 1 Name**
+- **Contributor 2 Name**
