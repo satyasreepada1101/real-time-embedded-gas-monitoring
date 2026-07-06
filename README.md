@@ -170,6 +170,6 @@ To demonstrate real-time embedded system design integrating sensing, control, co
 
 ## 👨‍💻 Contributors
 
-- @satyasreepada1101
-- @GrandhiAnanya
-- @JahnaviSatish
+- [Venkata Satya Sreepada](https://github.com/satyasreepada1101)
+- [Grandhi Ananya](https://github.com/GrandhiAnanya)
+- [Jahnavi S](https://github.com/JahnaviSatish)
